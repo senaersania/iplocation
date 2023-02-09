@@ -3,6 +3,9 @@
 
 # Configuration
 ```
+Tech: JDK 8gi
+```
+```
 MODIFY
     readFileService.readFile("/Users/sena/ecs/ecs_ap-southeast-5_sg-k1a09pphn39em9ns91zk.json")
 INTO

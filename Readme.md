@@ -3,7 +3,7 @@
 
 # Configuration
 ```
-Tech: JDK 8gi
+Tech: JDK 8
 ```
 ```
 MODIFY

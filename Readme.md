@@ -3,12 +3,15 @@
 
 # Configuration
 ```
-modify readFileService.readFile("/Users/sena/ecs/ecs_ap-southeast-5_sg-k1a09pphn39em9ns91zk.json") => into your /path/ecs.json
+MODIFY
+    readFileService.readFile("/Users/sena/ecs/ecs_ap-southeast-5_sg-k1a09pphn39em9ns91zk.json")
+INTO
+    readFileService.readFile("/your_path/ecs.json")
 ```
 
 # Feature
 ```
-- http://localhost:8080/iplocation
+http://localhost:8080/iplocation
 ```
 
 # Output

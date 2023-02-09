@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1> Books </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th> Title </th>
+                            <th> Author </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:if="${books.empty}">
+                            <td colspan="2"> No Books Available </td>
+                        </tr>
+                        <tr th:each="book : ${books}">
+                            <td><span th:text="${book.title}"> Title </span></td>
+                            <td><span th:text="${book.author}"> Author </span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <a class="btn btn-success" href="#" th:href="@{/create}"> Add Books </a>
+                <a class="btn btn-primary" href="#" th:href="@{/edit}" th:classappend="${books.empty} ? 'disabled' : ''"> Edit Books </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
